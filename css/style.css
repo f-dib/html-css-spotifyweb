@@ -1,0 +1,56 @@
+/*************************************************
+    GENERAL STYLES
+ *************************************************/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+    border: .5px solid red;
+}
+
+
+/************************************************
+    SECTION TO BE DELETED
+************************************************/
+
+
+/************************************************
+    UTILITIES
+************************************************/
+
+
+/************************************************
+    SITE SECTIONS
+************************************************/
+.main-body{
+    display: flex;
+    height: calc(100vh - 90px);
+}
+
+aside{
+    width: 230px;
+    background-color: black;
+}
+
+main{
+    flex-grow: 1;
+}
+
+.upgrade{
+    height: 90px;
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+.main-content{
+    height: calc(100% - 90px);
+    background-color: #141922;
+}
+
+.player{
+    height: 90px;
+    background-color: #282828;
+}
+/************************************************
+    RESPONSIVE SECTION
+************************************************/
