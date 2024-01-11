@@ -20,9 +20,8 @@
     /* border: .5px solid red; */
 }
 
-/************************************************
-    SECTION TO BE DELETED
-************************************************/
+
+
 
 
 /************************************************
@@ -37,8 +36,9 @@
     flex-direction: column;
 }
 
-button{
-}
+
+
+
 /************************************************
     SITE SECTIONS
 ************************************************/
@@ -55,6 +55,16 @@ aside{
     padding: 5px 20px;
 
     background-color: black;
+
+    justify-content: space-between;
+}
+
+
+
+.small-aside{
+    display: none;
+
+    color: yellow;
 }
 
 .logo{
@@ -73,6 +83,16 @@ aside{
     padding-bottom: 10px;
     list-style: none;
     color: #6f6f6f;
+}
+
+.small-aside-down{
+    display: none;
+
+    color: yellow;
+}
+
+.big-aside-down{
+    color: yellow;
 }
 
 main{
@@ -106,8 +126,6 @@ main{
 }
 
 .main-content{
-    /* height: 100%; */
-
     padding: 110px 20px 20px;
 
     background-color: #141922;
@@ -115,6 +133,7 @@ main{
 }
 
 .main-content ul.row{
+    flex-wrap: wrap;
     justify-content: center;
     gap: 20px;
 
@@ -137,6 +156,7 @@ section.content:first-child{
 
 .row.track{
     gap: 15px;
+    flex-wrap: wrap;
 }
 
 .album{
@@ -189,21 +209,60 @@ section.content:first-child{
     background-color: gray;
 }
 
+
+
+
+
 /************************************************
     RESPONSIVE SECTION
 ************************************************/
-@media screen and (max-width: 1199px){
-
-}
-
 @media screen and (max-width: 991px){
-
+    .album{
+        width: calc(100% / 4 - 15px * 3 / 4);
+    }
 }
 
 @media screen and (max-width: 767px){
+    .album{
+        width: calc(100% / 2 - 15px * 1 / 2);
+    }
 
+    .side-player,
+    .center-player{
+        width: calc(100% / 3);
+    }
 }
 
 @media screen and (max-width: 575px){
+    aside{
+        width: 50px;
+        min-width: 50px;
+        max-width: 50px;
+        
+        padding: 5px 10px;
+    }
+    
+    .big-aside{
+        display: none;
+    }
 
+    .small-aside{
+        display: block;
+    }
+
+    .small-aside-down{
+        display: block;
+    
+        color: yellow;
+    }
+    
+    .big-aside-down{
+        display: none;
+
+        color: yellow;
+    }
+
+    .upgrade{      
+       width: calc(100% - 50px);
+    }
 }
