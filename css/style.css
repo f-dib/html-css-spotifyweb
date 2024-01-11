@@ -1,14 +1,24 @@
 /*************************************************
     GENERAL STYLES
- *************************************************/
+*************************************************/
+@font-face {
+    font-family: 'Circular Spotify Text Medium';
+    src: url('../font/CircularSpotifyText-Medium.otf');
+    src: url('../font/CircularSpotifyText-Bold.otf');
+}
+
+@font-face {
+    font-family: 'Circular Spotify Text Bold';
+    src: url('../font/CircularSpotifyText-Bold.otf');
+}
+
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: sans-serif;
-    border: .5px solid red;
+    font-family: 'Circular Spotify Text Medium', sans-serif;
+    /* border: .5px solid red; */
 }
-
 
 /************************************************
     SECTION TO BE DELETED
@@ -18,8 +28,17 @@
 /************************************************
     UTILITIES
 ************************************************/
+.row{
+    display: flex;
+}
 
+.column{
+    display: flex;
+    flex-direction: column;
+}
 
+button{
+}
 /************************************************
     SITE SECTIONS
 ************************************************/
@@ -30,21 +49,69 @@
 
 aside{
     width: 230px;
+    min-width: 230px;
+    max-width: 230px;
+
+    padding: 5px 20px;
+
     background-color: black;
+}
+
+.logo{
+    height: 50px;
+    width: 100%;
+    background-color: grey;
+    margin-bottom: 20px;
+}
+
+.create-playlist div{
+    color: #6f6f6f;
+    padding: 10px;
+}
+
+.playlist ul li{
+    padding-bottom: 10px;
+    list-style: none;
+    color: #6f6f6f;
 }
 
 main{
     flex-grow: 1;
+    overflow-y: auto;
+    overflow-x: hidden;
 }
 
-.upgrade{
+.upgrade{      
+    position: fixed;
+    right: 0;
+    top: 0;
+
+    width: calc(100% - 230px);
     height: 90px;
-    background-color: rgba(0, 0, 0, 0.3);
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.upgrade button{
+    color: black;
+    background-color: white;
+    border: none;
+    padding: 7px 15px;
+    font-size: 1em;
+    cursor: pointer;
+
+    position: absolute;
+
+    right: 50px;
+    top: 25px;
 }
 
 .main-content{
-    height: calc(100% - 90px);
+    /* height: 100%; */
+
+    padding: 110px 20px 20px;
+
     background-color: #141922;
+    color: white;
 }
 
 .player{
@@ -54,3 +121,18 @@ main{
 /************************************************
     RESPONSIVE SECTION
 ************************************************/
+@media screen and (max-width: 1199px){
+
+}
+
+@media screen and (max-width: 991px){
+
+}
+
+@media screen and (max-width: 767px){
+
+}
+
+@media screen and (max-width: 575px){
+
+}
