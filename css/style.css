@@ -40,6 +40,9 @@
     height: calc(100vh - 90px);
 }
 
+ul li:hover{
+    color: white;
+}
 
 
 /************************************************
@@ -64,15 +67,43 @@ aside{
     display: none;
 }
 
+.small-aside div div img{
+    filter: invert(42%) sepia(0%) saturate(1411%) hue-rotate(228deg) brightness(103%) contrast(94%);
+}
+
+.small-aside div div:hover img{
+    filter: brightness(0) invert(1);
+}
+
 div.nav-btn ul li{
     padding-bottom: 10px;
     vertical-align: middle;
+}
+
+div.nav-btn ul li:nth-of-type(1){
+    position: relative;
+}
+
+div.nav-btn ul li div.vert-green{
+    width: 3px;
+    height: 70%;
+
+    position: absolute;
+
+    left: -20px;
+    top: 0;
+
+    background-color: #bbf45d;
 }
 
 .big-aside ul li span img{
     width: 15%;
 
     filter: invert(42%) sepia(0%) saturate(1411%) hue-rotate(228deg) brightness(103%) contrast(94%);
+}
+
+.big-aside ul li:hover img{
+    filter: invert(0);
 }
 
 .big-aside ul li span{
@@ -91,6 +122,10 @@ div.nav-btn ul li{
     padding: 10px 0px;
 
     color: #6f6f6f;
+}
+
+.create-playlist div:nth-of-type(1){
+    color: white;
 }
 
 button.row{
@@ -117,6 +152,14 @@ button.row .create-playlist{
     background-color: black;
 }
 
+button.row:hover .add-playlist{
+    background-color: white;
+}
+
+button.row:hover .create-playlist{
+    color: white;
+}
+
 .playlist ul li{
     padding-bottom: 20px;
     list-style: none;
@@ -133,6 +176,10 @@ button.row .create-playlist{
     padding-right: 2px;
 
     filter: invert(42%) sepia(0%) saturate(1411%) hue-rotate(228deg) brightness(103%) contrast(94%);
+}
+
+.small-aside-down:hover .download{
+    filter: brightness(0) invert(1);
 }
 
 .profile{
@@ -165,6 +212,14 @@ button.row .create-playlist{
     font-size: 15px;
 }
 
+.big-aside-down:hover .download{
+    filter: brightness(0) invert(1);
+}
+
+.big-aside-down:hover span{
+    color: white;
+}
+
 hr{
     border-color:  #6f6f6f;
 
@@ -185,6 +240,10 @@ hr{
 .big-aside-down h5{
     font-size: 16px;
 
+    color: white;
+}
+
+ul li:hover{
     color: white;
 }
 
@@ -226,6 +285,10 @@ main{
     top: 20px;
 }
 
+.upgrade button:hover{
+    scale: 110%;
+}
+
 
 /************** section: main content **************/
 
@@ -250,6 +313,16 @@ main{
     color: #6f6f6f;
 }
 
+.green{
+    width: 40%;
+    height: 2px;
+
+    margin: auto;
+    margin-top: 4px;
+
+    background-color: #bbf45d;
+}
+
 section.content{
     margin-bottom: 40px;
 }
@@ -267,7 +340,36 @@ section.content{
 }
 
 .album .album-cover{
+    position: relative;
     margin-bottom: 15px;
+}
+
+.play-overlay{
+    width: 100%;
+    height: 98.5%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    background-color: rgba(0, 0, 0, 0.4);
+
+    z-index: 2;
+
+    display: none;
+}
+
+.play-overlay .fa-circle-play{
+    scale: 500%;
+}
+
+.album:hover .play-overlay{
+    display: flex;
 }
 
 .album h2{
@@ -294,10 +396,14 @@ section.content{
 }
 
 .album-cover img{
-    width: 100%; 
+    width: 100%;  
 }
 
 .album-cover img.circle{
+    border-radius: 50%;
+}
+
+.over-circle{
     border-radius: 50%;
 }
 
@@ -347,11 +453,21 @@ section.content{
     font-size: 10px;
 }
 
+.left .album-name div:nth-of-type(2):hover{
+    color: white;
+
+    text-decoration: underline;
+}
+
 .row-column{
     display: flex;
     gap: 10px;
 
     color: #6f6f6f;
+}
+
+.row-column div:hover{
+    color: white;
 }
 
 .center-player{
@@ -380,6 +496,10 @@ section.content{
     font-size: 30px;
 }
 
+.center-player .row .fa-regular:hover{
+    scale: 120%;
+}
+
 .center-player .row:nth-of-type(2){
     font-size: 10px;
 }
@@ -404,6 +524,31 @@ section.content{
     border-radius: 2px;
 
     background-color: #c1c1c1;
+
+    position: relative;
+}
+
+.point{
+    display: none;
+
+    width: 10px;
+    height: 10px;
+
+    position: absolute;
+    right: -5px;
+    top: -2.5px;
+
+    border-radius: 50%;
+
+    background-color: white;
+}
+
+.time:hover .timer{
+    background-color: #bbf45d;
+}
+
+.time:hover .point{
+    display: block;
 }
 
 .side-player.right{
@@ -423,6 +568,7 @@ section.content{
 }
 
 .volume{
+    position: relative;
     width: 2vw;
     height: 5px;
 
@@ -431,6 +577,13 @@ section.content{
     background-color: #c1c1c1;
 }
 
+.max-volume:hover .volume{
+    background-color: #bbf45d;
+}
+
+.max-volume:hover .point{
+    display: block;
+}
 
 
 
