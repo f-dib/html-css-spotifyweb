@@ -17,7 +17,6 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'Circular Spotify Text Medium', sans-serif;
-    /* border: .5px solid red; */
 }
 
 
@@ -36,30 +35,30 @@
     flex-direction: column;
 }
 
+.main-body{
+    display: flex;
+    height: calc(100vh - 90px);
+}
 
 
 
 /************************************************
     SITE SECTIONS
 ************************************************/
-.main-body{
-    display: flex;
-    height: calc(100vh - 90px);
-}
+
+/*************** aside section *****************/
 
 aside{
     width: 230px;
     min-width: 230px;
     max-width: 230px;
 
+    justify-content: space-between;
+
     padding: 20px 20px 10px;
 
     background-color: black;
-
-    justify-content: space-between;
 }
-
-
 
 .small-aside{
     display: none;
@@ -84,12 +83,14 @@ div.nav-btn ul li{
 
 .logo{
     width: 80%;
+
     margin-bottom: 20px;
 }
 
 .create-playlist div{
-    color: #6f6f6f;
     padding: 10px 0px;
+
+    color: #6f6f6f;
 }
 
 button.row{
@@ -98,7 +99,6 @@ button.row{
     cursor: pointer;
 
     border: none;
-
     background-color: black;
 }
 
@@ -188,11 +188,18 @@ hr{
     color: white;
 }
 
+
+
+/****************** main ********************/
+
 main{
     flex-grow: 1;
     overflow-y: auto;
     overflow-x: hidden;
 }
+
+
+/************* main: upgrade ***************/
 
 .upgrade{      
     position: fixed;
@@ -218,6 +225,9 @@ main{
     right: 50px;
     top: 20px;
 }
+
+
+/************** section: main content **************/
 
 .main-content{
     padding: 110px 20px 20px;
@@ -260,7 +270,7 @@ section.content{
     margin-bottom: 15px;
 }
 
-.album .h2{
+.album h2{
     margin-bottom: 10px;
 }
 
@@ -269,14 +279,13 @@ section.content{
 }
 
 .row.track{
-    gap: 15px;
     flex-wrap: wrap;
+    gap: 15px;
 }
 
 .album{
     width: calc(100% / 6 - 15px * 5 / 6);
 
-    align-items: center;
     text-align: center;
 }
 
@@ -291,6 +300,9 @@ section.content{
 .album-cover img.circle{
     border-radius: 50%;
 }
+
+
+/*************** section: player ****************/
 
 .player{
     justify-content: space-between;
@@ -312,7 +324,6 @@ section.content{
 
 .side-player.left{
     justify-content: flex-start;
-
     gap: 10px;
 }
 
@@ -326,8 +337,9 @@ section.content{
 }
 
 .left .album-name div:nth-of-type(1){
-    color: white;
     font-size: 13px;
+
+    color: white;
 }
 
 .left .album-name div:nth-of-type(2){
@@ -419,6 +431,9 @@ section.content{
     background-color: #c1c1c1;
 }
 
+
+
+
 /************************************************
     RESPONSIVE SECTION
 ************************************************/
@@ -452,7 +467,7 @@ section.content{
         min-width: 50px;
         max-width: 50px;
         
-        padding: 5px 10px;
+        padding: 10px 10px;
     }
     
     .big-aside{
@@ -467,9 +482,6 @@ section.content{
         display: block;
     
         text-align: center;
-
-        align-items: center;
-        justify-content: center;
     }
     
     .big-aside-down{
@@ -477,6 +489,6 @@ section.content{
     }
 
     .upgrade{      
-       width: calc(100% - 50px);
+        width: calc(100% - 50px);
     }
 }

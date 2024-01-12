@@ -17,14 +17,22 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
+
+    <!-- main body -->
     <section class="main-body">
+
+        <!-- section: aside -->
         <aside class="playlist column">
+
+            <!-- small aside up -->
             <div class="small-aside">
                 <div><img src="img/logo-small.svg" alt="logo small"></div>
                 <div><img src="img/home.svg" alt="home"></div>
                 <div><img src="img/search.svg" alt="cerca"></div>
                 <div><img src="img/libreria.svg" alt="libreria"></div>
             </div>
+
+            <!-- big aside up -->
             <div class="big-aside">
                 <div class="logo"><img src="img/logo.svg" alt="logo"></div>
                 <div class="nav-btn">
@@ -55,21 +63,34 @@
                     </div>
                 </div>
             </div>
+
+            <!-- small aside down -->
             <div class="small-aside-down column">
                 <div><img class="download" src="img/download.svg" alt="download"></div>
                 <div><img class="profile" src="img/profile.svg" alt="profile"></div>
             </div>
+
+            <!-- big aside down -->
             <div class="big-aside-down">
                 <div class="row"><img class="download" src="img/download.svg" alt="download"><span>Installa app</span></div>
                 <hr>
                 <div class="row"><img class="profile" src="img/profile.svg" alt="profile"><h5>John Doe</h5></div>
             </div>
         </aside>
+        <!-- end section: aside -->
+
+
+        <!-- main -->
         <main>
+
+            <!-- section: upgrade -->
             <div class="upgrade">
                 <button>EFFETTUA L'UPGRADE</button>
             </div>
+
+            <!-- section: main content -->
             <div class="main-content">
+
                 <ul class="row">
                     <li>IN EVIDENZA</li>
                     <li>PODCAST</li>
@@ -78,6 +99,10 @@
                     <li>NUOVE USCITE</li>
                     <li>SCOPRI</li>
                 </ul>
+
+                <!------- section album ------->
+
+                <!-- recently played -->
                 <section class="content">
                     <h2 class="title-section">Recently Played</h2>
                     <div class="row track">
@@ -114,6 +139,7 @@
                     </div>
                 </section>
 
+                <!-- create for you -->
                 <section class="content">
                     <div class="title-section">
                         <h2>Creato per John Doe</h2>   
@@ -133,6 +159,7 @@
                     </div>
                 </section>
 
+                <!-- most popular artist -->
                 <section class="content">
                     <div class="title-section">
                         <h2>Artisti più popolari</h2>
@@ -154,10 +181,18 @@
                     </div>
                 </section>
             </div>
-        </main>
-    </section>
+            <!-- end section: main content -->
 
+        </main>
+        <!-- end main -->
+
+    </section>
+    <!-- end section: main body -->
+
+    <!-- section: player -->
     <section class="player row">
+
+        <!-- left player -->
         <div class="side-player left row">
             <div class="album-icon"><img src="img/sinister.jpeg" alt=""></div>
             <div class="album-name">
@@ -169,6 +204,8 @@
                 <div><i class="fa-regular fa-folder"></i></div>
             </div>
         </div>
+
+        <!-- center player -->
         <div class="center-player column">
             <div class="row">
                 <div><i class="fa-solid fa-shuffle"></i></div>
@@ -185,6 +222,8 @@
                 <div>4:35</div>
             </div>
         </div>
+
+        <!-- right player -->
         <div class="side-player right row">
             <div><i class="fa-solid fa-bars"></i></div>
             <div><i class="fa-solid fa-display"></i></div>
@@ -193,6 +232,9 @@
                 <div class="volume"></div>
             </div>
         </div>
+
     </section>
+    <!-- end section: player -->
+    
 </body>
 </html>
