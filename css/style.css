@@ -166,6 +166,12 @@ button.row:hover .create-playlist{
     color: #6f6f6f;
 }
 
+.new-playlist{
+    height: 30vh;
+
+    overflow-y: auto;
+}
+
 .small-aside-down{
     display: none;
 }
@@ -419,6 +425,12 @@ section.content{
     padding: 0px 10px;
 
     background-color: #282828;
+
+    position: fixed;
+    right: 0;
+    left: 0;
+
+    z-index: 10;
 }
 
 .side-player{
