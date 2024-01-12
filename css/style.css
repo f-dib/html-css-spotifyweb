@@ -76,6 +76,12 @@ div.nav-btn ul li{
     filter: invert(42%) sepia(0%) saturate(1411%) hue-rotate(228deg) brightness(103%) contrast(94%);
 }
 
+.big-aside ul li span{
+    vertical-align: middle;
+
+    padding-right: 5px;
+}
+
 .logo{
     width: 80%;
     margin-bottom: 20px;
@@ -83,11 +89,13 @@ div.nav-btn ul li{
 
 .create-playlist div{
     color: #6f6f6f;
-    padding: 10px;
+    padding: 10px 0px;
 }
 
 button.row{
     align-items: center;
+
+    cursor: pointer;
 
     border: none;
 
@@ -98,6 +106,8 @@ button.row .add-playlist{
     padding: 0px 13px;
 
     font-size: 40px;
+
+    margin-right: 10px;
 
     background-color: #6f6f6f;
     color: black;
@@ -298,16 +308,38 @@ section.content{
     height: 100%;
 
     align-items: center;
-
-    background-color: aqua;
 }
 
 .side-player.left{
     justify-content: flex-start;
+
+    gap: 10px;
 }
 
-.side-player.right{
-    justify-content: flex-end;
+.left .album-icon{
+    width: 40px;
+    height: 40px;
+}
+
+.left div.album-icon img{
+    width: 100%;
+}
+
+.left .album-name div:nth-of-type(1){
+    color: white;
+    font-size: 13px;
+}
+
+.left .album-name div:nth-of-type(2){
+    color: #6f6f6f;
+    font-size: 10px;
+}
+
+.row-column{
+    display: flex;
+    gap: 10px;
+
+    color: #6f6f6f;
 }
 
 .center-player{
@@ -317,12 +349,75 @@ section.content{
     justify-content: center;
     align-items: center;
 
-    background-color: gray;
+    gap: 15px;
+
+    color: white;
 }
 
+.center-player .row{
+    align-items: center;
 
+    gap: 25px;
+}
 
+.center-player .row:nth-of-type(1){
+    font-size: 15px;
+}
 
+.center-player .row .fa-regular{
+    font-size: 30px;
+}
+
+.center-player .row:nth-of-type(2){
+    font-size: 10px;
+}
+
+.fa-forward-step.back{
+    transform: scale(-1, 1);
+}
+
+.time{
+    width: 20vw;
+    height: 5px;
+
+    border-radius: 2px;
+
+    background-color: #6f6f6f;
+}
+
+.timer{
+    width: 5vw;
+    height: 5px;
+
+    border-radius: 2px;
+
+    background-color: #c1c1c1;
+}
+
+.side-player.right{
+    justify-content: flex-end;
+    gap: 10px;
+
+    color: white;
+}
+
+.max-volume{
+    width: 7vw;
+    height: 5px;
+
+    border-radius: 2px;
+
+    background-color: #6f6f6f;
+}
+
+.volume{
+    width: 2vw;
+    height: 5px;
+
+    border-radius: 2px;
+
+    background-color: #c1c1c1;
+}
 
 /************************************************
     RESPONSIVE SECTION
@@ -342,6 +437,13 @@ section.content{
     .center-player{
         width: calc(100% / 3);
     }
+
+    .row-column{
+        flex-direction: column;
+
+        gap: 0px;
+    }
+
 }
 
 @media screen and (max-width: 575px){
@@ -369,15 +471,9 @@ section.content{
         align-items: center;
         justify-content: center;
     }
-
-    .small-aside-down.column{
-
-    }
     
     .big-aside-down{
         display: none;
-
-        color: yellow;
     }
 
     .upgrade{      
