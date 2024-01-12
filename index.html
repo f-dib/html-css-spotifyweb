@@ -2,15 +2,16 @@
 <html lang="it">
 <head>
     <meta charset="UTF-8">
-    <title></title>
+    <title>Spotify</title>
+
+    <!-- add favicon -->
+    <link rel="icon" type="img/x-icon" href="img/favicon.ico">
     
     <!-- for media query -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <!-- link to css -->
     <link rel="stylesheet" href="css/style.css">
-
-    <!-- font style link -->
 
     <!-- link to font awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -19,24 +20,27 @@
     <section class="main-body">
         <aside class="playlist column">
             <div class="small-aside">
-                <div>text</div>
-                <div>text</div>
-                <div>text</div>
+                <div><img src="img/logo-small.svg" alt="logo small"></div>
+                <div><img src="img/home.svg" alt="home"></div>
+                <div><img src="img/search.svg" alt="cerca"></div>
+                <div><img src="img/libreria.svg" alt="libreria"></div>
             </div>
             <div class="big-aside">
-                <div class="logo"></div>
+                <div class="logo"><img src="img/logo.svg" alt="logo"></div>
                 <div class="nav-btn">
                     <ul>
-                        <li>Home</li>
-                        <li>Cerca</li>
-                        <li>La tua libreria</li>
+                        <li><span><img src="img/home.svg" alt="home"></span>Home</li>
+                        <li><span><img src="img/search.svg" alt="cerca"></span>Cerca</li>
+                        <li><span><img src="img/libreria.svg" alt="libreria"></span>La tua libreria</li>
                     </ul>
                 </div>
                 <div class="create-playlist">
                     <div>PLAYLIST</div>
-                    <div class="row">
-                        <div>+</div>
-                        <div>Crea Playlist</div>
+                    <div>
+                        <button class="row">
+                            <div class="add-playlist">+</div>
+                            <div class="create-playlist">Crea Playlist</div>
+                        </button>
                     </div>
                     <div>
                         <ul class="new-playlist">
@@ -51,15 +55,14 @@
                     </div>
                 </div>
             </div>
-            <div class="small-aside-down">
-                <div>text</div>
-                <hr>
-                <div>text</div>
+            <div class="small-aside-down column">
+                <div><img class="download" src="img/download.svg" alt="download"></div>
+                <div><img class="profile" src="img/profile.svg" alt="profile"></div>
             </div>
             <div class="big-aside-down">
-                <div>text</div>
+                <div class="row"><img class="download" src="img/download.svg" alt="download"><span>Installa app</span></div>
                 <hr>
-                <div>text</div>
+                <div class="row"><img class="profile" src="img/profile.svg" alt="profile"><h5>John Doe</h5></div>
             </div>
         </aside>
         <main>
@@ -76,43 +79,43 @@
                     <li>SCOPRI</li>
                 </ul>
                 <section class="content">
-                    <h2>Recently Played</h2>
+                    <h2 class="title-section">Recently Played</h2>
                     <div class="row track">
                         <div class="album column">
-                            <div class="album-cover"></div>
-                            <h2>title</h2>
-                            <div>author</div>
+                            <div class="album-cover"><img src="img/metal_lifting.jpg" alt="Heavy Metal"></div>
+                            <h2>Heavy Metal</h2>
+                            <div class="author">Subtitle</div>
                         </div>
                         <div class="album column">
-                            <div class="album-cover"></div>
-                            <h2>title</h2>
-                            <div>author</div>
+                            <div class="album-cover"><img src="img/stranger.jpeg" alt="Stranger Things, Vol. 1 (a Netflix Original Series Soundtrack)"></div>
+                            <h2>Stranger Things, Vol. 1 (a Netflix Original Series Soundtrack)</h2>
+                            <div class="author">Kyle Dixon & Michael Stein</div>
                         </div>
                         <div class="album column">
-                            <div class="album-cover"></div>
-                            <h2>title</h2>
-                            <div>author</div>
+                            <div class="album-cover"><img src="img/aquietplace.jpeg" alt="A quiet place"></div>
+                            <h2>A quiet place</h2>
+                            <div class="author">Subtitle</div>
                         </div>
                         <div class="album column">
-                            <div class="album-cover"></div>
-                            <h2>title</h2>
-                            <div>author</div>
+                            <div class="album-cover"><img src="img/split.jpeg" alt="Split"></div>
+                            <h2>Split</h2>
+                            <div class="author">Subtitle</div>
                         </div>
                         <div class="album column">
-                            <div class="album-cover"></div>
-                            <h2>title</h2>
-                            <div>author</div>
+                            <div class="album-cover"><img src="img/cure.jpeg" alt="A cure for wellness"></div>
+                            <h2>A cure for wellness</h2>
+                            <div class="author">Subtitle</div>
                         </div>
                         <div class="album column">
-                            <div class="album-cover"></div>
-                            <h2>title</h2>
-                            <div>author</div>
+                            <div class="album-cover"><img src="img/sinister.jpeg" alt="Sinister"></div>
+                            <h2>Sinister</h2>
+                            <div class="author">Subtitle</div>
                         </div>
                     </div>
                 </section>
 
                 <section class="content">
-                    <div>
+                    <div class="title-section">
                         <h2>Creato per John Doe</h2>   
                         <div>
                             Più ascolti, più accurati saranno i suggerimenti.
@@ -120,20 +123,18 @@
                     </div>
                     <div class="row track">
                         <div class="album column">
-                            <div class="album-cover"></div>
-                            <h2>title</h2>
-                            <div>author</div>
+                            <div class="album-cover"><img src="img/radar.jpeg" alt="Release Radar"></div>
+                            <h2>Release Radar</h2>
                         </div>
                         <div class="album column">
-                            <div class="album-cover"></div>
-                            <h2>title</h2>
-                            <div>author</div>
+                            <div class="album-cover"><img src="img/mixdaily.jpeg" alt="Daily Mix 1"></div>
+                            <h2>Daily Mix 1</h2>
                         </div>
                     </div>
                 </section>
 
                 <section class="content">
-                    <div>
+                    <div class="title-section">
                         <h2>Artisti più popolari</h2>
                         <div>
                             Più ascolti, più accurati saranno i suggerimenti.
@@ -142,14 +143,12 @@
                     <div>
                         <div class="row track">
                             <div class="album column">
-                                <div class="album-cover"></div>
-                                <h2>title</h2>
-                                <div>author</div>
+                                <div class="album-cover"><img class="circle" src="img/youg.jpeg" alt="Lana del Rey"></div>
+                                <h2>Lana del Rey</h2>
                             </div>
                             <div class="album column">
-                                <div class="album-cover"></div>
-                                <h2>title</h2>
-                                <div>author</div>
+                                <div class="album-cover"><img class="circle" src="img/einaudi.jpeg" alt="Ludovico Einaudi"></div>
+                                <h2>Ludovico Einaudi</h2>
                             </div>
                         </div>
                     </div>
