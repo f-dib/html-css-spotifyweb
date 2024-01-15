@@ -200,8 +200,8 @@ button.row:hover .create-playlist{
 }
 
 .new-playlist{
-    height: 20vh;
-    
+    height: 35vh;
+
     margin-bottom: 25px;
 
     overflow-y: auto;
