@@ -19,7 +19,7 @@
     font-family: 'Circular Spotify Text Medium', sans-serif;
 }
 
-
+/**************** set Scroll bar style  *************/
 /* width */
 ::-webkit-scrollbar {
     width: 5px;
@@ -69,6 +69,13 @@ ul li:hover{
     SITE SECTIONS
 ************************************************/
 
+/***************** main body ********************/
+
+.main-body{
+    overflow: hidden;
+}
+
+
 /*************** aside section *****************/
 
 aside{
@@ -81,6 +88,8 @@ aside{
     padding: 20px 20px 10px;
 
     background-color: black;
+
+    overflow-y: auto;
 }
 
 .small-aside{
@@ -188,6 +197,8 @@ button.row:hover .create-playlist{
 
 .new-playlist{
     height: 20vh;
+    
+    margin-bottom: 25px;
 
     overflow-y: auto;
 }
