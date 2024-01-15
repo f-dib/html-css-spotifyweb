@@ -64,6 +64,10 @@ ul li:hover{
     color: white;
 }
 
+.fa-solid,
+.fa-regular{
+    cursor: pointer;
+}
 
 /************************************************
     SITE SECTIONS
@@ -557,10 +561,6 @@ section.content{
     font-size: 10px;
 }
 
-.fa-forward-step.back{
-    transform: scale(-1, 1);
-}
-
 .time{
     width: 20vw;
     height: 5px;
@@ -571,7 +571,7 @@ section.content{
 }
 
 .timer{
-    width: 5vw;
+    width: 0vw;
     height: 5px;
 
     border-radius: 2px;
@@ -579,6 +579,21 @@ section.content{
     background-color: #c1c1c1;
 
     position: relative;
+
+    transition: width 275s;
+}
+
+.timer-j{
+    width: 0vw;
+    height: 5px;
+
+    border-radius: 2px;
+
+    background-color: #c1c1c1;
+
+    position: relative;
+
+    transition: width 275s;
 }
 
 .point{
@@ -621,7 +636,7 @@ section.content{
 }
 
 .volume{
-    /* position: relative; */
+    position: relative;
     width: 2vw;
     height: 5px;
 
@@ -824,9 +839,5 @@ section.content{
 
     .time{
         width: 50vw;
-    }
-    
-    .timer{
-        width: 12vw;
     }
 }
