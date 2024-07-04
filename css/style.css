@@ -397,7 +397,7 @@ section.content{
 
 .play-overlay{
     width: 100%;
-    height: 98.5%;
+    height: 97.5%;
 
     display: flex;
     justify-content: center;
@@ -409,6 +409,7 @@ section.content{
     left: 0;
 
     background-color: rgba(0, 0, 0, 0.4);
+    border-radius: 5px;
 
     z-index: 2;
 
@@ -448,6 +449,10 @@ section.content{
 
 .album-cover img{
     width: 100%;  
+}
+
+.rounded{
+    border-radius: 5px;
 }
 
 .album-cover img.circle{
