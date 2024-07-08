@@ -498,11 +498,13 @@ section.content{
 .left .album-icon{
     width: 40px;
     height: 40px;
+    background-size: cover;
+    background-position: center;
 }
-
+/* 
 .left div.album-icon img{
     width: 100%;
-}
+} */
 
 .left .album-name div:nth-of-type(1){
     font-size: 13px;
