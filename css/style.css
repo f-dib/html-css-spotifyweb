@@ -568,26 +568,15 @@ section.content{
     font-size: 10px;
 }
 
-.time{
+.seek_slider{
     width: 20vw;
     height: 5px;
 
-    border-radius: 2px;
-
-    background-color: #6f6f6f;
+    accent-color: white;
 }
 
-.timer{
-    width: 0vw;
-    height: 5px;
-
-    border-radius: 2px;
-
-    background-color: #c1c1c1;
-
-    position: relative;
-
-    transition: width 275s;
+.seek_slider:hover{
+    accent-color: #bbf45d;
 }
 
 .timer-j{
@@ -618,14 +607,6 @@ section.content{
     background-color: white;
 }
 
-.time:hover .timer{
-    background-color: #bbf45d;
-}
-
-.time:hover .point{
-    display: block;
-}
-
 .side-player.right{
     justify-content: flex-end;
     gap: 10px;
@@ -633,35 +614,17 @@ section.content{
     color: white;
 }
 
-.max-volume{
+.volume_slider{
+    display: flex;
+    align-items: center;
     width: 7vw;
     height: 5px;
 
-    border-radius: 2px;
-
-    background-color: #6f6f6f;
+    accent-color: white;
 }
 
-.volume{
-    position: relative;
-    width: 2vw;
-    height: 5px;
-
-    border-radius: 2px;
-
-    background-color: #c1c1c1;
-}
-
-.max-volume:hover .volume{
-    background-color: #bbf45d;
-}
-
-.max-volume:hover .point{
-    display: block;
-}
-
-.cell-player.column{
-    display: none;
+.volume_slider:hover{
+    accent-color: #bbf45d;
 }
 
 
