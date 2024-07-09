@@ -25,16 +25,54 @@ let track_list = [
   {
       name : "IO, ME ED ALTRI GUAI",
       artist : "Rose Villain",
-      image : "RadioSakura.jpg",
+      image : "img/RadioSakura.jpg",
       path : "music/IO_ME_ED_ALTRI_GUAI.mp3"
   },
   {
-    name : "IO, ME ED ALTRI GUAI",
-    artist : "Rose Villain",
-    image : "RadioSakura.jpg",
+    name : "Sunflower (Spider-Man: Into the Spider-Verse)",
+    artist : "Post Malone & Swae Lee",
+    image : "img/sunflower-spider-man-into-the-spider-verse.jpg",
     path : "IO_ME_ED_ALTRI_GUAI.mp3"
   }
 ]
+
+const trackContainer = document.getElementById('track-list');
+
+track_list.forEach(track => {
+    const albumDiv = document.createElement('div');
+    albumDiv.classList.add('album', 'column');
+
+    const albumCoverDiv = document.createElement('div');
+    albumCoverDiv.classList.add('album-cover');
+
+    const img = document.createElement('img');
+    img.classList.add('rounded');
+    img.src = track.image;
+    img.alt = track.name;
+
+    const playOverlayDiv = document.createElement('div');
+    playOverlayDiv.classList.add('play-overlay');
+    const playIcon = document.createElement('i');
+    playIcon.classList.add('fa-regular', 'fa-circle-play');
+    playOverlayDiv.appendChild(playIcon);
+
+    albumCoverDiv.appendChild(img);
+    albumCoverDiv.appendChild(playOverlayDiv);
+
+    const trackNameH2 = document.createElement('h2');
+    trackNameH2.classList.add('track-name');
+    trackNameH2.textContent = track.name;
+
+    const trackArtistDiv = document.createElement('div');
+    trackArtistDiv.classList.add('author', 'track-artist');
+    trackArtistDiv.textContent = track.artist;
+
+    albumDiv.appendChild(albumCoverDiv);
+    albumDiv.appendChild(trackNameH2);
+    albumDiv.appendChild(trackArtistDiv);
+
+    trackContainer.appendChild(albumDiv);
+});
 
 function loadTrack(track_index) {
   // Clear the previous seek timer
@@ -46,8 +84,7 @@ function loadTrack(track_index) {
   curr_track.load();
   
   // Update details of the track
-  track_art.style.backgroundImage = 
-    `url("img/${track_list[track_index].image}")`;
+  track_art.style.backgroundImage = `url("${track_list[track_index].image}")`;
   track_name.textContent = track_list[track_index].name;
   track_artist.textContent = track_list[track_index].artist;
   
