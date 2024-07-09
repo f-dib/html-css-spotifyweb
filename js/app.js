@@ -29,10 +29,28 @@ let track_list = [
       path : "music/IO_ME_ED_ALTRI_GUAI.mp3"
   },
   {
-    name : "Sunflower (Spider-Man: Into the Spider-Verse)",
-    artist : "Post Malone & Swae Lee",
-    image : "img/sunflower-spider-man-into-the-spider-verse.jpg",
-    path : "IO_ME_ED_ALTRI_GUAI.mp3"
+      name : "Sunflower (Spider-Man: Into the Spider-Verse)",
+      artist : "Post Malone & Swae Lee",
+      image : "img/sunflower-spider-man-into-the-spider-verse.jpg",
+      path : "music/Sunflower.mp3"
+  },
+  {
+      name : "IDGAF",
+      artist : "Dua Lipa",
+      image : "img/dua.webp",
+      path : "music/IDGAF.mp3"
+  },
+  {
+      name : "QUALCOSA IN CUI CREDERE",
+      artist : "Marracash",
+      image : "img/marra.jpg",
+      path : "music/QUALCOSA_IN_CUI_CREDERE.mp3"
+  },
+  {
+      name : "Con il nastro rosa",
+      artist : "Lucio Battisti",
+      image : "img/battisti.webp",
+      path : "music/Con_il_nastro_rosa.mp3"
   }
 ]
 
