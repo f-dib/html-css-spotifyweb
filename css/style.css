@@ -627,6 +627,9 @@ section.content{
     accent-color: #bbf45d;
 }
 
+.cell-player{
+    display: none;
+}
 
 
 /************************************************
@@ -694,17 +697,26 @@ section.content{
         height: calc(100vh - 150px);
     }
 
-    .player.row{
-        display: none;
-    }
-
     .cell-player.column{
         display: flex;
     }
 
+    .player .side-player.left,
+    .player .side-player.right{
+        display: none;
+    }
+
+    .player .center-player .row{
+        width: 100%;
+        justify-content: space-around;
+        margin: 10px 0px;
+    }
+
+    .seek_slider{
+        width: 40vw;
+    }
+
     .cell-player{
-        height: 150px;
-    
         padding: 0px;
 
         background-color: #282828;
@@ -805,6 +817,7 @@ section.content{
         height: 80px;
 
         padding: 0px 10px;
+        display: block;
     }
 
     .time{

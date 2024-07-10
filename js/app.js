@@ -1,8 +1,8 @@
 // Select all the elements in the HTML page
 // and assign them to a variable
-let track_art = document.querySelector(".track-art");
-let track_name = document.querySelector(".track-name");
-let track_artist = document.querySelector(".track-artist");
+let track_art = document.querySelectorAll(".track-art");
+let track_name = document.querySelectorAll(".track-name");
+let track_artist = document.querySelectorAll(".track-artist");
  
 let playpause_btn = document.querySelector(".playpause-track");
 let next_btn = document.querySelector(".next-track");
@@ -102,9 +102,9 @@ function loadTrack(track_index) {
   curr_track.load();
   
   // Update details of the track
-  track_art.style.backgroundImage = `url("${track_list[track_index].image}")`;
-  track_name.textContent = track_list[track_index].name;
-  track_artist.textContent = track_list[track_index].artist;
+  track_art.forEach(art => art.style.backgroundImage = `url("${track_list[track_index].image}")`);
+  track_name.forEach(name => name.textContent = track_list[track_index].name);
+  track_artist.forEach(artist => artist.textContent = track_list[track_index].artist);
   
   // Set an interval of 1000 milliseconds
   // for updating the seek slider
