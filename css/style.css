@@ -38,7 +38,7 @@
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-    background: #bbf45d; 
+    background: #1bc659; 
 }
 
 
@@ -126,7 +126,7 @@ div.nav-btn ul li div.vert-green{
     left: -20px;
     top: 0;
 
-    background-color: #bbf45d;
+    background-color: #1bc659;
 }
 
 .big-aside ul li span img{
@@ -371,7 +371,7 @@ main{
     margin: auto;
     margin-top: 4px;
 
-    background-color: #bbf45d;
+    background-color: #1bc659;
 }
 
 section.content{
@@ -390,38 +390,51 @@ section.content{
     color: #6f6f6f;
 }
 
-.album .album-cover{
+.album.column{
     position: relative;
+    padding: 5px;
+}
+
+.album .album-cover{
     margin-bottom: 15px;
 }
 
 .play-overlay{
     width: 100%;
-    height: 97.5%;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    height: 100%;
 
     position: absolute;
 
     top: 0;
     left: 0;
 
-    background-color: rgba(0, 0, 0, 0.4);
+    background-color: rgba(255, 255, 255, 0.1);
     border-radius: 5px;
 
-    z-index: 2;
-
-    display: none;
+    visibility: hidden;
 }
 
 .play-overlay .fa-circle-play{
-    scale: 500%;
+    scale: 350%;
+    position: absolute;
+    top: 50%;
+    left: 75%;
+    color: #1bc659;
+    background-color: #000000;
+    border-radius: 50%;
+    opacity: 0;
+    transform: translateY(30%);
+    transition: all 0.2s ease-in;
+    z-index: 3;
 }
 
-.album:hover .play-overlay{
-    display: flex;
+.album:hover .play-overlay {
+    visibility: visible;
+}
+
+.album:hover .play-overlay .fa-circle-play {
+    opacity: 1;
+    transform: translateY(0%);
 }
 
 .album h2{
@@ -576,7 +589,7 @@ section.content{
 }
 
 .seek_slider:hover{
-    accent-color: #bbf45d;
+    accent-color: #1bc659;
 }
 
 .timer-j{
@@ -624,7 +637,7 @@ section.content{
 }
 
 .volume_slider:hover{
-    accent-color: #bbf45d;
+    accent-color: #1bc659;
 }
 
 .cell-player{

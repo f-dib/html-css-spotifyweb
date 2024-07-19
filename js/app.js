@@ -29,7 +29,7 @@ let track_list = [
       path : "music/IO_ME_ED_ALTRI_GUAI.mp3"
   },
   {
-      name : "Sunflower (Spider-Man: Into the Spider-Verse)",
+      name : "Sunflower",
       artist : "Post Malone & Swae Lee",
       image : "img/sunflower-spider-man-into-the-spider-verse.jpg",
       path : "music/Sunflower.mp3"
@@ -71,7 +71,7 @@ track_list.forEach(track => {
     const playOverlayDiv = document.createElement('div');
     playOverlayDiv.classList.add('play-overlay');
     const playIcon = document.createElement('i');
-    playIcon.classList.add('fa-regular', 'fa-circle-play');
+    playIcon.classList.add('fa-solid', 'fa-circle-play');
     playOverlayDiv.appendChild(playIcon);
 
     albumCoverDiv.appendChild(img);
@@ -135,7 +135,7 @@ function playTrack() {
   isPlaying = true;
  
   // Replace icon with the pause icon
-  playpause_btn.innerHTML = '<i class="fa-regular fa-circle-pause"></i>';
+  playpause_btn.innerHTML = '<i class="fa-solid fa-circle-pause fa-2xl"></i>';
 }
  
 function pauseTrack() {
@@ -144,7 +144,7 @@ function pauseTrack() {
   isPlaying = false;
  
   // Replace icon with the play icon
-  playpause_btn.innerHTML = '<i class="fa-regular fa-circle-play"></i>';
+  playpause_btn.innerHTML = '<i class="fa-solid fa-circle-play fa-2xl"></i>';
 }
  
 function nextTrack() {
