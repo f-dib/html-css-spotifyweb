@@ -7,6 +7,8 @@ let track_artist = document.querySelectorAll(".track-artist");
 let playpause_btn = document.querySelector(".playpause-track");
 let next_btn = document.querySelector(".next-track");
 let prev_btn = document.querySelector(".prev-track");
+let shuffle_btn = document.querySelector(".fa-shuffle");
+let rotate_btn = document.querySelector(".fa-arrow-rotate-right");
  
 let seek_slider = document.querySelector(".seek_slider");
 let volume_slider = document.querySelector(".volume_slider");
@@ -17,6 +19,7 @@ let total_duration = document.querySelector(".total-duration");
 // Specify globally used values
 let track_index = 0;
 let isPlaying = false;
+let isShuffle = false; 
 let updateTimer;
  
 // Create the audio element for the player
@@ -57,7 +60,7 @@ let track_list = [
 
 const trackContainer = document.getElementById('track-list');
 
-track_list.forEach(track => {
+track_list.forEach((track, index) => {
     const albumDiv = document.createElement('div');
     albumDiv.classList.add('album', 'column');
 
@@ -73,6 +76,7 @@ track_list.forEach(track => {
     playOverlayDiv.classList.add('play-overlay');
     const playIcon = document.createElement('i');
     playIcon.classList.add('fa-solid', 'fa-circle-play');
+    playIcon.setAttribute('data-index', index);
     playOverlayDiv.appendChild(playIcon);
 
     albumCoverDiv.appendChild(img);
@@ -93,7 +97,19 @@ track_list.forEach(track => {
     trackContainer.appendChild(albumDiv);
 });
 
-function loadTrack(track_index) {
+// Add event listeners to play icons
+document.querySelectorAll('.fa-circle-play').forEach(playIcon => {
+  playIcon.addEventListener('click', (event) => {
+      const trackIndex = event.target.getAttribute('data-index');
+      loadTrack(trackIndex);
+      playTrack();
+      updatePlayIcons(trackIndex);
+  });
+});
+
+function loadTrack(index) {
+  track_index = parseInt(index);
+
   // Clear the previous seek timer
   clearInterval(updateTimer);
   resetValues();
@@ -151,12 +167,17 @@ function pauseTrack() {
 function nextTrack() {
   // Go back to the first track if the
   // current one is the last in the track list
-  if (track_index < track_list.length - 1)
-    track_index += 1;
-  else track_index = 0;
- 
-  // Load and play the new track
-  loadTrack(track_index);
+  if (isShuffle) {
+    let randomIndex = Math.floor(Math.random() * track_list.length);
+    loadTrack(randomIndex);
+  } else {
+      if (track_index < track_list.length - 1)
+          track_index += 1;
+      else 
+          track_index = 0;
+      loadTrack(track_index);
+  }
+
   playTrack();
 }
  
@@ -169,6 +190,18 @@ function prevTrack() {
    
   // Load and play the new track
   loadTrack(track_index);
+  playTrack();
+}
+
+// Funzione per riprodurre una traccia casuale
+function shuffleTrack() {
+    isShuffle = !isShuffle; // Toggle shuffle
+    shuffle_btn.classList.toggle('active', isShuffle); // Optional: Add a class to indicate shuffle is active
+}
+
+// Funzione per ricominciare la traccia corrente dall'inizio
+function rotateTrack() {
+  curr_track.currentTime = 0;
   playTrack();
 }
 
@@ -190,7 +223,7 @@ function setVolume() {
 
 function setVolumeMobile() {
   // Set the volume according to the
-  // percentage of the volume slider set
+  // percentage of the volume slider for mobile set
   curr_track.volume = volume_slider_mobile.value / 100;
 }
  
@@ -217,6 +250,21 @@ function seekUpdate() {
     // Display the updated duration
     curr_time.textContent = currentMinutes + ":" + currentSeconds;
     total_duration.textContent = durationMinutes + ":" + durationSeconds;
+  }
+}
+
+function updatePlayIcons(trackIndex) {
+  // Reset all play icons to the initial state
+  document.querySelectorAll('.fa-circle-play, .fa-circle-pause').forEach(icon => {
+    // Update the main play button to pause
+    playpause_btn.innerHTML = '<i class="fa-solid fa-circle-play fa-2xl"></i>';
+  });
+
+  // Set the play icon of the current track to pause
+  const currentIcon = document.querySelector(`.fa-circle-play[data-index="${trackIndex}"]`);
+  if (currentIcon) {
+    // Update the main play button to pause
+    playpause_btn.innerHTML = '<i class="fa-solid fa-circle-pause fa-2xl"></i>';
   }
 }
 

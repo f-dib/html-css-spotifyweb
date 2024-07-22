@@ -188,24 +188,6 @@
                     </div>
                 </div>
             </div>
-            
-            <!-- <div class="center-player column">
-                <div class="row">
-                    <div><i class="fa-solid fa-shuffle"></i></div>
-                    <div><i class="fa-solid fa-backward-step"></i></div>
-                    <div><i id="myBtn-j" class="fa-regular fa-circle-play"></i></div>
-                    <div><i class="fa-solid fa-forward-step"></i></div>
-                    <div><i class="fa-solid fa-arrow-rotate-right"></i></div>
-                </div>
-
-                <div class="row">
-                    <div>0:00</div>
-                    <div class="time">
-                        <div class="timer-j"><div class="point"></div></div>
-                    </div>
-                    <div>4:35</div>
-                </div>
-            </div> -->
         </div>
 
         <div class="player row">
@@ -226,7 +208,7 @@
         <!-- center player -->
         <div class="center-player column content">
             <div class="row">
-                <div><i class="fa-solid fa-shuffle"></i></div>
+                <div><i class="fa-solid fa-shuffle" onclick="shuffleTrack()"></i></div>
                 <div class="prev-track" onclick="prevTrack()">
                     <i class="fa-solid fa-backward-step"></i>
                 </div>
@@ -236,7 +218,7 @@
                 <div class="next-track" onclick="nextTrack()">
                     <i class="fa-solid fa-forward-step"></i>
                 </div>
-                <div><i class="fa-solid fa-arrow-rotate-right"></i></div>
+                <div><i class="fa-solid fa-arrow-rotate-right" onclick="rotateTrack()"></i></div>
             </div>
             <div class="row">
                 <div class="current-time">0:00</div>
