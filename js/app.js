@@ -10,6 +10,7 @@ let prev_btn = document.querySelector(".prev-track");
  
 let seek_slider = document.querySelector(".seek_slider");
 let volume_slider = document.querySelector(".volume_slider");
+let volume_slider_mobile = document.querySelector(".volume_slider_mobile");
 let curr_time = document.querySelector(".current-time");
 let total_duration = document.querySelector(".total-duration");
  
@@ -185,6 +186,12 @@ function setVolume() {
   // Set the volume according to the
   // percentage of the volume slider set
   curr_track.volume = volume_slider.value / 100;
+}
+
+function setVolumeMobile() {
+  // Set the volume according to the
+  // percentage of the volume slider set
+  curr_track.volume = volume_slider_mobile.value / 100;
 }
  
 function seekUpdate() {

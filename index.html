@@ -181,9 +181,8 @@
                     <div><i class="fa-solid fa-display"></i></div>
                     <div class="cell-volume">
                         <div class="container-volume">
-                            <div class="max-volume">
-                                <div class="volume"><div class="cell-point"></div></div>
-                            </div>
+                            <input type="range" min="0" max="100"
+                                value="99" class="volume_slider_mobile" onchange="setVolumeMobile()">
                         </div>
                         <i class="fa-solid fa-volume-high"></i>
                     </div>
@@ -253,7 +252,7 @@
             <div><i class="fa-solid fa-display"></i></div>
             <div><i class="fa-solid fa-volume-high"></i></div>
             <div>
-                <input type="range" min="1" max="100"
+                <input type="range" min="0" max="100"
                     value="99" class="volume_slider" onchange="setVolume()">
             </div>
         </div>

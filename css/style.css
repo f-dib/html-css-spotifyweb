@@ -514,10 +514,6 @@ section.content{
     background-size: cover;
     background-position: center;
 }
-/* 
-.left div.album-icon img{
-    width: 100%;
-} */
 
 .left .album-name div:nth-of-type(1){
     font-size: 13px;
@@ -590,34 +586,6 @@ section.content{
 
 .seek_slider:hover{
     accent-color: #1bc659;
-}
-
-.timer-j{
-    width: 0vw;
-    height: 5px;
-
-    border-radius: 2px;
-
-    background-color: #c1c1c1;
-
-    position: relative;
-
-    transition: width 275s;
-}
-
-.point{
-    display: none;
-
-    width: 10px;
-    height: 10px;
-
-    position: absolute;
-    right: -5px;
-    top: -2.5px;
-
-    border-radius: 50%;
-
-    background-color: white;
 }
 
 .side-player.right{
@@ -778,47 +746,20 @@ section.content{
         border-radius: 5px;
         display: none;
     }
-
-    .max-volume{
-        position: relative;
-
-        width: 5px;
-        height: 100px;
-
-        padding-top: 50px;
-    
-        border-radius: 2px;
-    
-        background-color: #6f6f6f;
-    }
-    
-    .volume{
-        position: relative;
-        width: 5px;
-        height: 50px;
-
-        left: 0;
-        bottom: 0;
-    
-        border-radius: 2px;
-    
-        background-color: #c1c1c1;
-    }
-
-    .cell-point{
-        /* display: none; */
-    
-        width: 10px;
-        height: 10px;
-    
-        position: absolute;
         
-        right: -2.5px;
-        top: -5px;
-    
-        border-radius: 50%;
-    
-        background-color: white;
+    .volume_slider_mobile{
+        position: absolute;
+        top: 50%;
+        left: -150%;
+        width: 100px;
+        height: 5px;
+
+        rotate: -90deg;
+        accent-color: white;
+    }
+
+    .volume_slider_mobile:hover{
+        accent-color: #1bc659;
     }
     
     .cell-volume:hover div:nth-last-of-type(1){
